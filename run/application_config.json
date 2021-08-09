@@ -1,0 +1,601 @@
+{
+  "config": {
+    "session": {
+      "maxAge": 86400000,
+      "key": "EGG_SESS",
+      "httpOnly": true,
+      "encrypt": true,
+      "logValue": true,
+      "overwrite": true,
+      "signed": true,
+      "autoCommit": true,
+      "encode": "<Function encode>",
+      "decode": "<Function decode>",
+      "genid": "<Function v4>"
+    },
+    "security": {
+      "domainWhiteList": [],
+      "protocolWhiteList": [],
+      "defaultMiddleware": "csrf,hsts,methodnoallow,noopen,nosniff,csp,xssProtection,xframe,dta",
+      "csrf": {
+        "enable": false,
+        "type": "ctoken",
+        "ignoreJSON": false,
+        "useSession": false,
+        "cookieName": "csrfToken",
+        "sessionName": "csrfToken",
+        "headerName": "x-csrf-token",
+        "bodyName": "_csrf",
+        "queryName": "_csrf",
+        "refererWhiteList": []
+      },
+      "xframe": {
+        "enable": true,
+        "value": "SAMEORIGIN",
+        "matching": "<Function anonymous>"
+      },
+      "hsts": {
+        "enable": false,
+        "maxAge": 31536000,
+        "includeSubdomains": false
+      },
+      "dta": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "methodnoallow": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "noopen": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "nosniff": {
+        "enable": true,
+        "matching": "<Function anonymous>"
+      },
+      "referrerPolicy": {
+        "enable": false,
+        "value": "no-referrer-when-downgrade"
+      },
+      "xssProtection": {
+        "enable": true,
+        "value": "1; mode=block",
+        "matching": "<Function anonymous>"
+      },
+      "csp": {
+        "enable": false,
+        "policy": {}
+      },
+      "ssrf": {
+        "ipBlackList": null,
+        "ipExceptionList": null,
+        "checkAddress": null
+      },
+      "_protocolWhiteListSet": "<Set>"
+    },
+    "helper": {
+      "shtml": {}
+    },
+    "jsonp": {
+      "limit": 50,
+      "callback": [
+        "_callback",
+        "callback"
+      ],
+      "csrf": false
+    },
+    "onerror": {
+      "errorPageUrl": "",
+      "appErrorFilter": null,
+      "templatePath": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-onerror/lib/onerror_page.mustache"
+    },
+    "i18n": {
+      "defaultLocale": "en_US",
+      "dirs": [
+        "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-session/config/locales",
+        "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-security/config/locales",
+        "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-jsonp/config/locales",
+        "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-onerror/config/locales",
+        "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-i18n/config/locales",
+        "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-watcher/config/locales",
+        "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-schedule/config/locales",
+        "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-multipart/config/locales",
+        "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-development/config/locales",
+        "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-logrotator/config/locales",
+        "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-static/config/locales",
+        "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-view/config/locales",
+        "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-mongoose/config/locales",
+        "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-cors/config/locales",
+        "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-jwt/config/locales",
+        "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg/config/locales",
+        "/Users/ziyu/Documents/dev/gymgest-official-site-node/config/locales"
+      ],
+      "queryField": "locale",
+      "cookieField": "locale",
+      "cookieDomain": "",
+      "cookieMaxAge": "1y",
+      "functionName": "__"
+    },
+    "watcher": {
+      "type": "development",
+      "eventSources": {
+        "default": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-watcher/lib/event-sources/default",
+        "development": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-watcher/lib/event-sources/development"
+      }
+    },
+    "customLogger": {
+      "scheduleLogger": {
+        "consoleLevel": "NONE",
+        "file": "egg-schedule.log"
+      }
+    },
+    "schedule": {
+      "directory": []
+    },
+    "multipart": {
+      "mode": "stream",
+      "autoFields": false,
+      "defaultCharset": "utf8",
+      "fieldNameSize": 100,
+      "fieldSize": 102400,
+      "fields": 10,
+      "fileSize": 10485760,
+      "files": 10,
+      "fileExtensions": [],
+      "whitelist": null,
+      "allowArrayField": false,
+      "tmpdir": "/var/folders/9n/bh79yyxn3mv22shtxn7fbz2r0000gn/T/egg-multipart-tmp/gymgest-official-site-node",
+      "cleanSchedule": {
+        "cron": "0 30 4 * * *",
+        "disable": false
+      }
+    },
+    "development": {
+      "watchDirs": [],
+      "ignoreDirs": [],
+      "fastReady": false,
+      "reloadOnDebug": true,
+      "overrideDefault": false,
+      "overrideIgnore": false
+    },
+    "logrotator": {
+      "filesRotateByHour": null,
+      "hourDelimiter": "-",
+      "filesRotateBySize": null,
+      "maxFileSize": 52428800,
+      "maxFiles": 10,
+      "rotateDuration": 60000,
+      "maxDays": 31
+    },
+    "static": {
+      "prefix": "/public/",
+      "dir": "/Users/ziyu/Documents/dev/gymgest-official-site-node/app/public",
+      "dynamic": true,
+      "preload": false,
+      "buffer": false,
+      "maxFiles": 1000
+    },
+    "view": {
+      "root": "/Users/ziyu/Documents/dev/gymgest-official-site-node/app/view",
+      "cache": false,
+      "defaultExtension": ".html",
+      "defaultViewEngine": "",
+      "mapping": {}
+    },
+    "mongoose": {
+      "url": "mongodb://127.0.0.1:27017/test-database",
+      "options": {
+        "useUnifiedTopology": true,
+        "useNewUrlParser": true
+      },
+      "plugins": [],
+      "loadModel": true,
+      "app": true,
+      "agent": false,
+      "client": {
+        "url": "mongodb://127.0.0.1:27017/test-database",
+        "options": {
+          "useUnifiedTopology": true,
+          "useNewUrlParser": true
+        }
+      }
+    },
+    "cors": {
+      "origin": "*",
+      "allowMethods": "GET,HEAD,PUT,POST,DELETE,PATCH",
+      "credentials": true
+    },
+    "jwt": {
+      "secret": "<String len: 7>",
+      "enable": false
+    },
+    "env": "local",
+    "name": "gymgest-official-site-node",
+    "keys": "<String len: 45>",
+    "cookies": {},
+    "proxy": false,
+    "maxIpsCount": 0,
+    "maxProxyCount": 0,
+    "protocolHeaders": "x-forwarded-proto",
+    "ipHeaders": "x-forwarded-for",
+    "hostHeaders": "",
+    "pkg": {
+      "name": "gymgest-official-site-node",
+      "version": "1.0.0",
+      "description": "",
+      "private": true,
+      "egg": {
+        "typescript": true,
+        "declarations": true
+      },
+      "scripts": {
+        "start": "egg-scripts start --daemon --title=egg-server-egg-ts-demo",
+        "stop": "egg-scripts stop --title=egg-server-egg-ts-demo",
+        "dev": "egg-bin dev",
+        "debug": "egg-bin debug",
+        "test-local": "egg-bin test",
+        "test": "npm run test-local",
+        "cov": "egg-bin cov",
+        "tsc": "ets && tsc -p tsconfig.json",
+        "ci": "npm run lint && npm run cov && npm run tsc",
+        "autod": "autod",
+        "lint": "tslint --project . -c tslint.json",
+        "clean": "ets clean"
+      },
+      "dependencies": {
+        "@typegoose/typegoose": "^6.4.0",
+        "apollo-server-koa": "^2.9.12",
+        "egg": "^2.6.1",
+        "egg-cors": "^2.2.3",
+        "egg-jwt": "^3.1.7",
+        "egg-mongoose": "^3.2.0",
+        "egg-scripts": "^2.6.0",
+        "fs-extra": "^8.1.0",
+        "fs-jetpack": "^4.1.1",
+        "mongoose": "^5.9.3",
+        "prettier": "^1.19.1",
+        "reflect-metadata": "^0.1.13"
+      },
+      "devDependencies": {
+        "@types/mocha": "^2.2.40",
+        "@types/node": "^7.0.12",
+        "@types/supertest": "^2.0.0",
+        "autod": "^3.0.1",
+        "autod-egg": "^1.1.0",
+        "egg-bin": "^4.11.0",
+        "egg-ci": "^1.8.0",
+        "egg-mock": "^3.16.0",
+        "tslib": "^1.9.0",
+        "tslint": "^5.20.1",
+        "tslint-config-egg": "^1.0.0",
+        "typescript": "^3.7.2"
+      },
+      "engines": {
+        "node": ">=8.9.0"
+      },
+      "ci": {
+        "version": "8"
+      },
+      "repository": {
+        "type": "git",
+        "url": ""
+      },
+      "eslintIgnore": [
+        "coverage"
+      ],
+      "author": "ziyu.yan",
+      "license": "MIT"
+    },
+    "baseDir": "/Users/ziyu/Documents/dev/gymgest-official-site-node",
+    "HOME": "/Users/ziyu",
+    "rundir": "/Users/ziyu/Documents/dev/gymgest-official-site-node/run",
+    "dump": {
+      "ignore": "<Set>"
+    },
+    "confusedConfigurations": {
+      "bodyparser": "bodyParser",
+      "notFound": "notfound",
+      "sitefile": "siteFile",
+      "middlewares": "middleware",
+      "httpClient": "httpclient"
+    },
+    "notfound": {
+      "pageUrl": ""
+    },
+    "siteFile": {
+      "/favicon.ico": "<Buffer len: 6463>"
+    },
+    "bodyParser": {
+      "enable": true,
+      "encoding": "utf8",
+      "formLimit": "1mb",
+      "jsonLimit": "1mb",
+      "textLimit": "1mb",
+      "strict": true,
+      "queryString": {
+        "arrayLimit": 100,
+        "depth": 5,
+        "parameterLimit": 1000
+      },
+      "returnRawBody": true
+    },
+    "logger": {
+      "dir": "/Users/ziyu/Documents/dev/gymgest-official-site-node/logs/gymgest-official-site-node",
+      "encoding": "utf8",
+      "env": "local",
+      "level": "INFO",
+      "consoleLevel": "INFO",
+      "disableConsoleAfterReady": false,
+      "outputJSON": false,
+      "buffer": true,
+      "appLogName": "gymgest-official-site-node-web.log",
+      "coreLogName": "egg-web.log",
+      "agentLogName": "egg-agent.log",
+      "errorLogName": "common-error.log",
+      "coreLogger": {
+        "consoleLevel": "WARN"
+      },
+      "allowDebugAtProd": false,
+      "type": "application"
+    },
+    "httpclient": {
+      "enableDNSCache": false,
+      "dnsCacheLookupInterval": 10000,
+      "dnsCacheMaxLength": 1000,
+      "request": {
+        "timeout": 5000
+      },
+      "httpAgent": {
+        "keepAlive": true,
+        "freeSocketTimeout": 4000,
+        "maxSockets": 9007199254740991,
+        "maxFreeSockets": 256
+      },
+      "httpsAgent": {
+        "keepAlive": true,
+        "freeSocketTimeout": 4000,
+        "maxSockets": 9007199254740991,
+        "maxFreeSockets": 256
+      }
+    },
+    "meta": {
+      "enable": true,
+      "logging": false
+    },
+    "coreMiddleware": [
+      "cors",
+      "meta",
+      "siteFile",
+      "notfound",
+      "static",
+      "bodyParser",
+      "overrideMethod",
+      "session",
+      "securities",
+      "i18n",
+      "eggLoaderTrace"
+    ],
+    "workerStartTimeout": 600000,
+    "serverTimeout": null,
+    "cluster": {
+      "listen": {
+        "path": "",
+        "port": 7001,
+        "hostname": ""
+      }
+    },
+    "clusterClient": {
+      "maxWaitTime": 60000,
+      "responseTimeout": 60000
+    },
+    "onClientError": null,
+    "middleware": [
+      "jwt"
+    ],
+    "modelWhitelist": [
+      "BaseModel",
+      "Fee"
+    ],
+    "sourceUrl": "https://github.com/eggjs/examples/tree/master/gymgest-official-site-node",
+    "coreMiddlewares": "~config~coreMiddleware",
+    "appMiddlewares": "~config~middleware",
+    "appMiddleware": "~config~middleware",
+    "multipartParseOptions": {
+      "autoFields": false,
+      "defCharset": "utf8",
+      "limits": {
+        "fieldNameSize": 100,
+        "fieldSize": 102400,
+        "fields": 10,
+        "fileSize": 10485760,
+        "files": 10
+      },
+      "checkFile": "<Function checkFile>"
+    }
+  },
+  "plugins": {
+    "onerror": {
+      "enable": true,
+      "package": "egg-onerror",
+      "name": "onerror",
+      "dependencies": [],
+      "optionalDependencies": [
+        "jsonp"
+      ],
+      "env": [],
+      "from": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg/config/plugin.js",
+      "path": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-onerror",
+      "version": "2.1.0"
+    },
+    "session": {
+      "enable": true,
+      "package": "egg-session",
+      "name": "session",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg/config/plugin.js",
+      "path": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-session",
+      "version": "3.3.0"
+    },
+    "i18n": {
+      "enable": true,
+      "package": "egg-i18n",
+      "name": "i18n",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg/config/plugin.js",
+      "path": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-i18n",
+      "version": "2.1.1"
+    },
+    "watcher": {
+      "enable": true,
+      "package": "egg-watcher",
+      "name": "watcher",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg/config/plugin.js",
+      "path": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-watcher",
+      "version": "3.1.1"
+    },
+    "multipart": {
+      "enable": true,
+      "package": "egg-multipart",
+      "name": "multipart",
+      "dependencies": [],
+      "optionalDependencies": [
+        "schedule"
+      ],
+      "env": [],
+      "from": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg/config/plugin.js",
+      "path": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-multipart",
+      "version": "2.13.1"
+    },
+    "security": {
+      "enable": true,
+      "package": "egg-security",
+      "name": "security",
+      "dependencies": [],
+      "optionalDependencies": [
+        "session"
+      ],
+      "env": [],
+      "from": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg/config/plugin.js",
+      "path": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-security",
+      "version": "2.9.0"
+    },
+    "development": {
+      "enable": true,
+      "package": "egg-development",
+      "name": "development",
+      "dependencies": [
+        "watcher"
+      ],
+      "optionalDependencies": [],
+      "env": [
+        "local"
+      ],
+      "from": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg/config/plugin.js",
+      "path": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-development",
+      "version": "2.7.0"
+    },
+    "logrotator": {
+      "enable": true,
+      "package": "egg-logrotator",
+      "name": "logrotator",
+      "dependencies": [
+        "schedule"
+      ],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg/config/plugin.js",
+      "path": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-logrotator",
+      "version": "3.1.0"
+    },
+    "schedule": {
+      "enable": true,
+      "package": "egg-schedule",
+      "name": "schedule",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg/config/plugin.js",
+      "path": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-schedule",
+      "version": "3.6.6"
+    },
+    "static": {
+      "enable": true,
+      "package": "egg-static",
+      "name": "static",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/ziyu/Documents/dev/gymgest-official-site-node/config/plugin.ts",
+      "path": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-static",
+      "version": "2.2.0"
+    },
+    "jsonp": {
+      "enable": true,
+      "package": "egg-jsonp",
+      "name": "jsonp",
+      "dependencies": [],
+      "optionalDependencies": [
+        "security"
+      ],
+      "env": [],
+      "from": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg/config/plugin.js",
+      "path": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-jsonp",
+      "version": "2.0.0"
+    },
+    "view": {
+      "enable": true,
+      "package": "egg-view",
+      "name": "view",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg/config/plugin.js",
+      "path": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-view",
+      "version": "2.1.3"
+    },
+    "mongoose": {
+      "enable": true,
+      "package": "egg-mongoose",
+      "name": "mongoose",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/ziyu/Documents/dev/gymgest-official-site-node/config/plugin.ts",
+      "path": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-mongoose",
+      "version": "3.3.1"
+    },
+    "cors": {
+      "enable": true,
+      "package": "egg-cors",
+      "name": "cors",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/ziyu/Documents/dev/gymgest-official-site-node/config/plugin.ts",
+      "path": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-cors",
+      "version": "2.2.3"
+    },
+    "jwt": {
+      "enable": true,
+      "package": "egg-jwt",
+      "name": "jwt",
+      "dependencies": [],
+      "optionalDependencies": [
+        "onerror"
+      ],
+      "env": [],
+      "from": "/Users/ziyu/Documents/dev/gymgest-official-site-node/config/plugin.ts",
+      "path": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-jwt",
+      "version": "3.1.7"
+    }
+  }
+}
