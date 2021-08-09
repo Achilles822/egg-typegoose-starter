@@ -5,8 +5,8 @@
       "POST"
     ],
     "paramNames": [],
-    "path": "/admin/login",
-    "regexp": "/^\\/admin\\/login(?:\\/(?=$))?$/",
+    "path": "/api/user/login",
+    "regexp": "/^\\/api\\/user\\/login(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]
@@ -17,8 +17,8 @@
       "POST"
     ],
     "paramNames": [],
-    "path": "/admin",
-    "regexp": "/^\\/admin(?:\\/(?=$))?$/",
+    "path": "/api/admin",
+    "regexp": "/^\\/api\\/admin(?:\\/(?=$))?$/",
     "stack": [
       "jwt",
       "wrappedController"
@@ -27,74 +27,11 @@
   {
     "name": null,
     "methods": [
-      "HEAD",
-      "GET"
-    ],
-    "paramNames": [],
-    "path": "/",
-    "regexp": "/^(?:\\/(?=$))?$/",
-    "stack": [
-      "wrappedController"
-    ]
-  },
-  {
-    "name": null,
-    "methods": [
-      "HEAD",
-      "GET"
-    ],
-    "paramNames": [],
-    "path": "/user",
-    "regexp": "/^\\/user(?:\\/(?=$))?$/",
-    "stack": [
-      "wrappedController"
-    ]
-  },
-  {
-    "name": null,
-    "methods": [
-      "HEAD",
-      "GET"
-    ],
-    "paramNames": [],
-    "path": "/users",
-    "regexp": "/^\\/users(?:\\/(?=$))?$/",
-    "stack": [
-      "wrappedController"
-    ]
-  },
-  {
-    "name": null,
-    "methods": [
-      "PUT"
-    ],
-    "paramNames": [],
-    "path": "/user",
-    "regexp": "/^\\/user(?:\\/(?=$))?$/",
-    "stack": [
-      "wrappedController"
-    ]
-  },
-  {
-    "name": null,
-    "methods": [
       "POST"
     ],
     "paramNames": [],
-    "path": "/user",
-    "regexp": "/^\\/user(?:\\/(?=$))?$/",
-    "stack": [
-      "wrappedController"
-    ]
-  },
-  {
-    "name": null,
-    "methods": [
-      "DELETE"
-    ],
-    "paramNames": [],
-    "path": "/user",
-    "regexp": "/^\\/user(?:\\/(?=$))?$/",
+    "path": "/api/user/register",
+    "regexp": "/^\\/api\\/user\\/register(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]
@@ -106,8 +43,8 @@
       "GET"
     ],
     "paramNames": [],
-    "path": "/testStaticMethods",
-    "regexp": "/^\\/testStaticMethods(?:\\/(?=$))?$/",
+    "path": "/api",
+    "regexp": "/^\\/api(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]
@@ -119,8 +56,47 @@
       "GET"
     ],
     "paramNames": [],
-    "path": "/testInstanceFunction",
-    "regexp": "/^\\/testInstanceFunction(?:\\/(?=$))?$/",
+    "path": "/api/user",
+    "regexp": "/^\\/api\\/user(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/api/users",
+    "regexp": "/^\\/api\\/users(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/api/testStaticMethods",
+    "regexp": "/^\\/api\\/testStaticMethods(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/api/testInstanceFunction",
+    "regexp": "/^\\/api\\/testInstanceFunction(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]

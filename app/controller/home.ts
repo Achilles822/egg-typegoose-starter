@@ -24,40 +24,40 @@ export default class HomeController extends Controller {
     ctx.body = users;
   }
 
-  public async addUser() {
-    const ctx = this.ctx;
+  // public async addUser() {
+  //   const ctx = this.ctx;
 
-    // 模拟前端传递过来的数据（方便测试）
-    const user = new UserModel();
-    user.userName = 'add user';
-    user.userNo = 99;
+  //   // 模拟前端传递过来的数据（方便测试）
+  //   const user = new UserModel();
+  //   user.userName = 'add user';
+  //   user.userNo = 99;
 
-    const res = await UserModel.create(user);
+  //   const res = await UserModel.create(user);
 
-    ctx.body = res;
-  }
+  //   ctx.body = res;
+  // }
 
-  public async updateUser() {
-    const ctx = this.ctx;
+  // public async updateUser() {
+  //   const ctx = this.ctx;
 
-    const user = new UserModel();
-    user.userNo = 99;
+  //   const user = new UserModel();
+  //   user.userNo = 99;
 
-    const res = await UserModel.findOneAndUpdate({ userNo: user.userNo }, { userName: 'i am from update' }, { new: true });
+  //   const res = await UserModel.findOneAndUpdate({ userNo: user.userNo }, { userName: 'i am from update' }, { new: true });
 
-    ctx.body = res;
-  }
+  //   ctx.body = res;
+  // }
 
-  public async deleteUser() {
-    const ctx = this.ctx;
+  // public async deleteUser() {
+  //   const ctx = this.ctx;
 
-    const user = new UserModel();
-    user.userNo = 99;
+  //   const user = new UserModel();
+  //   user.userNo = 99;
 
-    const res = await UserModel.findOneAndRemove({ userNo: user.userNo });
+  //   const res = await UserModel.findOneAndRemove({ userNo: user.userNo });
 
-    ctx.body = res;
-  }
+  //   ctx.body = res;
+  // }
 
   public async testInstanceFunction() {
     const ctx = this.ctx;

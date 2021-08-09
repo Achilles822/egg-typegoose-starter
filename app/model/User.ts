@@ -11,18 +11,18 @@ import { index, getModelForClass, prop } from '@typegoose/typegoose';
 export default class User extends BaseModel {
 
   @prop({ required: true })
-  userNo: number;
+  username: string;
 
   @prop({ required: true })
-  userName?: string;
+  password?: string;
 
 
   //#region（实例方法 和 实例方法）
   public async userInstanceTestMethods() {
 
     const user: User = new User();
-    user.userName = '我是实例化方法测试';
-    user.userNo = 9527;
+    // user.userName = '我是实例化方法测试';
+    // user.userNo = 9527;
 
     return user;
   }
@@ -30,8 +30,8 @@ export default class User extends BaseModel {
   public static async userStaticTestMethods() {
 
     const user: User = new User();
-    user.userName = '我是静态方法测试';
-    user.userNo = 9527;
+    // user.userName = '我是静态方法测试';
+    // user.userNo = 9527;
 
     return user;
   }

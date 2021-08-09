@@ -4,14 +4,15 @@ export default (app: Application) => {
   const { controller, router, middleware } = app;
   const jwt = middleware.jwt(app.config.jwt)
 
-  router.post('/admin/login', controller.user.login);
-  router.post('/admin', jwt, controller.user.index);
-  router.get('/', controller.home.index);
-  router.get('/user', controller.home.getUser);
-  router.get('/users', controller.home.getUsers);
-  router.put('/user', controller.home.updateUser);
-  router.post('/user', controller.home.addUser);
-  router.delete('/user', controller.home.deleteUser);
-  router.get('/testStaticMethods', controller.home.testStaticMethods);
-  router.get('/testInstanceFunction', controller.home.testInstanceFunction);
+  router.post('/api/user/login', controller.user.login);
+  router.post('/api/admin', jwt, controller.user.index);
+  router.post('/api/user/register', controller.user.register);
+  router.get('/api', controller.home.index);
+  router.get('/api/user', controller.home.getUser);
+  router.get('/api/users', controller.home.getUsers);
+  // router.put('/api/user', controller.home.updateUser);
+  // router.post('/api/user', controller.home.addUser);
+  // router.delete('/api/user', controller.home.deleteUser);
+  router.get('/api/testStaticMethods', controller.home.testStaticMethods);
+  router.get('/api/testInstanceFunction', controller.home.testInstanceFunction);
 };
