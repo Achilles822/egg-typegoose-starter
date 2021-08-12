@@ -17,7 +17,7 @@ export default (appInfo: EggAppInfo) => {
       // hostname: '0.0.0.0', //localhost
     }
   };
-  
+
   config.modelWhitelist = ['BaseModel', 'Fee'];
 
   config.security = {
@@ -26,15 +26,15 @@ export default (appInfo: EggAppInfo) => {
     },
   };
 
+  config.mongoose = {
+    url: 'mongodb://admin_gymgest:V56kB1hQRUwt3oVK@mongodb001-repltest001.gz.cvte.cn:27017,mongodb002-repltest001.gz.cvte.cn:27017,mongodb003-repltest001.gz.cvte.cn:27017/gymgest?replicaSet=Repltest001',
+    options: { useUnifiedTopology: true, useNewUrlParser: true },
+  };
+
   config.cors = {
     origin: '*',
     allowMethods: 'GET,HEAD,PUT,POST,DELETE,PATCH',
     credentials: true
-  };
-
-  config.mongoose = {
-    url: process.env.EGG_MONGODB_URL || 'mongodb://127.0.0.1:27017/test-database',
-    options: { useUnifiedTopology: true },
   };
 
   config.jwt = {

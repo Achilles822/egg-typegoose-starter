@@ -64,20 +64,21 @@
       "checkAddress": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-security/config/config.default.js"
     }
   },
-  "cors": {
-    "origin": "/Users/ziyu/Documents/dev/gymgest-official-site-node/config/config.default.ts",
-    "allowMethods": "/Users/ziyu/Documents/dev/gymgest-official-site-node/config/config.default.ts",
-    "credentials": "/Users/ziyu/Documents/dev/gymgest-official-site-node/config/config.default.ts"
-  },
   "mongoose": {
     "url": "/Users/ziyu/Documents/dev/gymgest-official-site-node/config/config.default.ts",
     "options": {
-      "useUnifiedTopology": "/Users/ziyu/Documents/dev/gymgest-official-site-node/config/config.default.ts"
+      "useUnifiedTopology": "/Users/ziyu/Documents/dev/gymgest-official-site-node/config/config.default.ts",
+      "useNewUrlParser": "/Users/ziyu/Documents/dev/gymgest-official-site-node/config/config.default.ts"
     },
     "plugins": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-mongoose/config/config.default.js",
     "loadModel": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-mongoose/config/config.default.js",
     "app": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-mongoose/config/config.default.js",
     "agent": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg-mongoose/config/config.default.js"
+  },
+  "cors": {
+    "origin": "/Users/ziyu/Documents/dev/gymgest-official-site-node/config/config.default.ts",
+    "allowMethods": "/Users/ziyu/Documents/dev/gymgest-official-site-node/config/config.default.ts",
+    "credentials": "/Users/ziyu/Documents/dev/gymgest-official-site-node/config/config.default.ts"
   },
   "jwt": {
     "secret": "/Users/ziyu/Documents/dev/gymgest-official-site-node/config/config.default.ts",
