@@ -5,7 +5,7 @@ export default class HomeController extends Controller {
 
   public async index() {
     const ctx = this.ctx;
-    ctx.body = await ctx.service.user.sayHi('egg');
+    ctx.body = 'hi'
   }
 
   public async getUser() {

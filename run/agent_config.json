@@ -192,7 +192,7 @@
         "declarations": true
       },
       "scripts": {
-        "start": "egg-scripts start --daemon --title=egg-server-egg-ts-demo",
+        "start": "egg-scripts start --title=egg-server-egg-ts-demo",
         "stop": "egg-scripts stop --title=egg-server-egg-ts-demo",
         "dev": "egg-bin dev",
         "debug": "egg-bin debug",
@@ -337,7 +337,7 @@
     "cluster": {
       "listen": {
         "path": "",
-        "port": 7001,
+        "port": 8080,
         "hostname": ""
       }
     },

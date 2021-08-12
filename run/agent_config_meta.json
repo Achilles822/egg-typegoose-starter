@@ -1,6 +1,13 @@
 {
   "keys": "/Users/ziyu/Documents/dev/gymgest-official-site-node/config/config.default.ts",
   "middleware": "/Users/ziyu/Documents/dev/gymgest-official-site-node/config/config.default.ts",
+  "cluster": {
+    "listen": {
+      "port": "/Users/ziyu/Documents/dev/gymgest-official-site-node/config/config.default.ts",
+      "path": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg/config/config.default.js",
+      "hostname": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg/config/config.default.js"
+    }
+  },
   "modelWhitelist": "/Users/ziyu/Documents/dev/gymgest-official-site-node/config/config.default.ts",
   "security": {
     "csrf": {
@@ -323,13 +330,6 @@
   "coreMiddleware": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg/config/config.default.js",
   "workerStartTimeout": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg/config/config.default.js",
   "serverTimeout": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg/config/config.default.js",
-  "cluster": {
-    "listen": {
-      "path": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg/config/config.default.js",
-      "port": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg/config/config.default.js",
-      "hostname": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg/config/config.default.js"
-    }
-  },
   "clusterClient": {
     "maxWaitTime": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg/config/config.default.js",
     "responseTimeout": "/Users/ziyu/Documents/dev/gymgest-official-site-node/node_modules/egg/config/config.default.js"
