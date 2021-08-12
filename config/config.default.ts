@@ -10,6 +10,14 @@ export default (appInfo: EggAppInfo) => {
   // add your egg config in here
   config.middleware = [];
 
+  config.cluster = {
+    listen: {
+      // path: '',
+      port: 8080,
+      // hostname: '0.0.0.0', //localhost
+    }
+  };
+  
   config.modelWhitelist = ['BaseModel', 'Fee'];
 
   config.security = {
