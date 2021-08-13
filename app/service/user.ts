@@ -8,7 +8,6 @@ import { UserModel } from '../model/User';
 export default class UserService extends Service {
 
   /**
-  * sayHi to you
   * @param name - your name
   */
   public async sayHi(name: string) {

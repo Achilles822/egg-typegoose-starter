@@ -9,11 +9,6 @@ describe('test/app/service/Test.test.js', () => {
     ctx = app.mockContext();
   });
 
-  it('sayHi', async () => {
-    const result = await ctx.service.user.sayHi('egg');
-    assert(result === 'hi, egg');
-  });
-
   it('addUserByScheduleTest', async () => {
     const result = await ctx.service.user.addUserByScheduleTest();
     assert(result.userNo === 99);

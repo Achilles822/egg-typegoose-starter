@@ -12,13 +12,11 @@ export default (appInfo: EggAppInfo) => {
 
   config.cluster = {
     listen: {
-      // path: '',
       port: 8080,
-      // hostname: '0.0.0.0', //localhost
     }
   };
 
-  config.modelWhitelist = ['BaseModel', 'Fee'];
+  config.modelWhitelist = ['BaseModel'];
 
   config.security = {
     csrf: {
@@ -27,7 +25,7 @@ export default (appInfo: EggAppInfo) => {
   };
 
   config.mongoose = {
-    url: 'mongodb://admin_gymgest:V56kB1hQRUwt3oVK@mongodb001-repltest001.gz.cvte.cn:27017,mongodb002-repltest001.gz.cvte.cn:27017,mongodb003-repltest001.gz.cvte.cn:27017/gymgest?replicaSet=Repltest001',
+    url: '127.0.0.1:27017',
     options: { useUnifiedTopology: true, useNewUrlParser: true },
   };
 
@@ -38,7 +36,7 @@ export default (appInfo: EggAppInfo) => {
   };
 
   config.jwt = {
-    secret: "Gymgest"//自定义 token 的加密条件字符串
+    secret: "jhnsz9c7"//自定义 token 的加密条件字符串
   };
 
   // add your special config in here
