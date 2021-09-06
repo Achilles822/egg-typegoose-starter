@@ -1,11 +1,18 @@
-import { Controller } from 'egg';
-import { UserModel } from '../model/User';
+import { Controller } from "egg";
+import { UserModel } from "../model/User";
 
+/**
+ * @Controller Home
+ */
 export default class HomeController extends Controller {
-
+  /**
+   * @Router GET /
+   * @Summary 你好
+   * @Response 200 userReponse ok
+   */
   public async index() {
     const ctx = this.ctx;
-    ctx.body = 'hi'
+    ctx.body = "hi";
   }
 
   public async getUser() {
@@ -16,6 +23,10 @@ export default class HomeController extends Controller {
     ctx.body = users;
   }
 
+  /**
+   * @Router GET /users
+   * @Summary 用户列表
+   */
   public async getUsers() {
     const ctx = this.ctx;
 
@@ -74,5 +85,4 @@ export default class HomeController extends Controller {
 
     ctx.body = user;
   }
-
 }
