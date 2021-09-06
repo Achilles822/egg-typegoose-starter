@@ -3,3 +3,4 @@ logs
 yarn.lock
 run
 .github
+typings
